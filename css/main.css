@@ -2,3 +2,12 @@
     margin: 50px;
 }
 
+.tm-site-header {
+    display: flex;
+    
+}
+
+.tm-site-header div {
+
+    height: 600px;
+}
