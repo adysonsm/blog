@@ -18,20 +18,20 @@ function writeData(id,nome,email){
         mod=-1;
     }
 
-    database.ref('meta/').set({
-        qtd: id+1
-    });  
-
      var updates = {};
      updates['leads/' + (id+1)] = {
         
         email: email, 
         nome: nome,
         hora: data.getUTCFullYear()+'-'+data.getUTCMonth()+'-'+(data.getUTCDate()+mod)+' '+(data.getUTCHours()+timezone+mod*(-24))+':'+data.getUTCMinutes()+':'+data.getUTCSeconds(),
-        ip:  getIP.ip
+        ip:  getIP.ip,
+        tipo: 'B2C'
 
      };
-     
+
+     database.ref('meta/').set({
+        qtd: id+1
+    });  
 
     return firebase.database().ref().update(updates);
 
@@ -46,7 +46,7 @@ function Get(yourUrl){
 
 submitButton.onclick = function(){
 
-    
+    console.log(nomeRef.value);    
     if (nomeRef.value.indexOf(' ')<1){
         console.log('nome invalido');
         alert('Nome inválido!')
@@ -57,15 +57,44 @@ submitButton.onclick = function(){
     
     }
     else{
+
         return firebase.database().ref('/meta/').once('value').then(function(snapshot) {
+
+            const qtd = snapshot.val().qtd;
+
+            return firebase.database().ref('/leads/').once('value').then(function(snapshot) {
+
+            var i = 0;  
+            var repetido=false
             
-            writeData(Number(snapshot.val().qtd),nomeRef.value,emailRef.value);
+            for (i=1;i<=qtd;i++){
+
+                //console.log(snapshot.val()[i].email);
+
+                if (snapshot.val()[i].email == emailRef.value){
+                    repetido = true;
+                    console.log('email repetido');
+                    alert('O e-mail informado já está cadastrado')
+                }
+                if (snapshot.val()[i].nome == nomeRef.value){
+                    repetido = true;
+                    console.log('nome repetido');
+                    alert('O nome informado já está cadastrado')
+                }
+
+            }
+
+            if (repetido == false){
+
+                writeData(qtd,nomeRef.value,emailRef.value);
+
+                document.getElementById("form1").reset();
+
+            }
+    
+            });   
 
         });
-        }
-    
-}
-
-
-
-
+        
+    }
+} 

@@ -8,6 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129056841-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129056841-1');
+    </script>
+
 </head>
 
 <body>
@@ -117,21 +128,20 @@
         <div class="container">
             <div class="form-row">
 
-                <div class="col mx-auto">
-                    <label for="validationCustom01">Nome Completo</label>
-                    <input type="text" class="form-control" id="input-nome" placeholder="Nome completo" required>
-                </div>
-                <div class="col mx-auto">
-                    <label for="validationCustom02">E-Mail</label>
-                    <input type="email" class="form-control" id="input-email" placeholder="E-mail" required>
-                </div>
-
-                <div class="align-self-end">
-                    <button id='submit-button'>Enviar</button>
-                </div>
-            </div>
+    
+    <form id="form1">
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Nome Completo</label>
+        <input type="text" class="form-control" id="input-nome" placeholder="Nome completo" required>
+    </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom02">E-Mail</label>
+            <input type="email" class="form-control" id="input-email" placeholder="E-mail" required>
         </div>
     </div>
+    </form>
+    <button id='submit-button' >Enviar</button>
 
 
     <div class="card-footer">
