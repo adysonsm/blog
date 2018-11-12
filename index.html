@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="main.js"> </script>
 </head>
 
 <body>
@@ -106,7 +105,22 @@
 
     </div>
 
-<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
+    
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Nome Completo</label>
+        <input type="text" class="form-control" id="input-nome" placeholder="Nome completo" required>
+    </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom02">E-Mail</label>
+            <input type="email" class="form-control" id="input-email" placeholder="E-mail" required>
+        </div>
+    </div>
+    <button id='submit-button' >Enviar</button>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
     <script>
@@ -121,6 +135,8 @@
       };
       firebase.initializeApp(config);
     </script>
+    <script src="scripts/main.js"></script>
+
 
 </body>
 
