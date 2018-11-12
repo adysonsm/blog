@@ -22,3 +22,14 @@
     
 }
 
+.align-text {
+
+    margin: 30px;
+    text-align: center
+}
+
+#formulario {
+       background-color:#959595;     
+       padding: 20px;
+}
+
