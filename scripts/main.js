@@ -46,7 +46,7 @@ function Get(yourUrl){
 
 submitButton.onclick = function(){
 
-    
+    console.log(nomeRef.value);    
     if (nomeRef.value.indexOf(' ')<1){
         console.log('nome invalido');
         alert('Nome inválido!')
@@ -82,11 +82,13 @@ submitButton.onclick = function(){
                     alert('O nome informado já está cadastrado')
                 }
 
-                if (repetido == false){
+            }
 
-                    writeData(qtd,nomeRef.value,emailRef.value);
-                    
-                }
+            if (repetido == false){
+
+                writeData(qtd,nomeRef.value,emailRef.value);
+
+                document.getElementById("form1").reset();
 
             }
     
