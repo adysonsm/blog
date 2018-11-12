@@ -18,20 +18,20 @@ function writeData(id,nome,email){
         mod=-1;
     }
 
-    database.ref('meta/').set({
-        qtd: id+1
-    });  
-
      var updates = {};
      updates['leads/' + (id+1)] = {
         
         email: email, 
         nome: nome,
         hora: data.getUTCFullYear()+'-'+data.getUTCMonth()+'-'+(data.getUTCDate()+mod)+' '+(data.getUTCHours()+timezone+mod*(-24))+':'+data.getUTCMinutes()+':'+data.getUTCSeconds(),
-        ip:  getIP.ip
+        ip:  getIP.ip,
+        tipo: 'B2C'
 
      };
-     
+
+     database.ref('meta/').set({
+        qtd: id+1
+    });  
 
     return firebase.database().ref().update(updates);
 
@@ -58,11 +58,11 @@ submitButton.onclick = function(){
     }
     else{
         return firebase.database().ref('/meta/').once('value').then(function(snapshot) {
-            
+
             writeData(Number(snapshot.val().qtd),nomeRef.value,emailRef.value);
 
         });
-        }
+    }
     
 }
 
