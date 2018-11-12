@@ -1,13 +1,24 @@
-.row{
+.row {
     margin: 50px;
 }
 
 .tm-site-header {
     display: flex;
     
+
+}
+
+.tm-site-header{
+
+    height: 600px;
+    display: flex;
+    justify-content: center
+
 }
 
 .tm-site-header div {
-
-    height: 600px;
+    flex-grow: 1;
+    text-align: center;
+    
 }
+
