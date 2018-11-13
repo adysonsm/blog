@@ -89,7 +89,7 @@ submitButton.onclick = function(){
 
             if (repetido == false){
 
-                writeData(qtd,nomeRef.value,emailRef.value,interesseRef.selectedIndex);
+                writeData(qtd,nomeRef.value,emailRef.value,interesseRef.value);
                 
 
 
