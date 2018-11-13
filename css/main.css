@@ -39,11 +39,21 @@
 #formulario {
        background-color:#959595;     
        padding: 20px;
+
 }
 
 
-#forme{
+#form{
 
-position: absolute 10px;
+
+margin-top: -70px;   
+position: relative;
+
+}
+
+#form-campos{
+
+    padding-bottom: 30px;
+    background-color: #5063EF;
 
 }
