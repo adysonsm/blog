@@ -12,7 +12,8 @@
 
     height: auto;
     display: flex;
-    justify-content: center
+    flex-shrink: 1;
+    justify-content: center;
 
 }
 
@@ -25,7 +26,7 @@
 .align-text {
 
     margin: 30px;
-    text-align: center
+    text-align: center;
 }
 
 #formulario {
