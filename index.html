@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tudo para encontrar o seu cantinho | Piscou Alugou</title>
+    <meta name="description" content="Postamos as melhores dicas pra alugar apartamento, seja para quem quer aumentar a renda ou para quem procura o lugar ideal para morar" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
@@ -51,7 +52,7 @@
 
 
 
-        <form  class="d-flex align-items-center flex-column" id="form-campos" >
+        <form  class="d-flex align-items-center flex-column" id="form-campos" onsubmit="event.preventDefault();">
 
             <h2 class="align-text">Ola Mundo Lindo</h2>
             <p class=" col-md-10">
@@ -68,7 +69,7 @@
                 <input type="text" class="form-control" id="input-nome" placeholder="Nome completo" required>
 
             </div>
-    
+
 
             <div class="form-group col-md-5">
                 <label for="validationCustom02">E-Mail</label>
@@ -77,7 +78,7 @@
 
             <div class="form-group col-md-5">
                 <label for="validationCustom03">Estou</label>
-                <select class="form-control">
+                <select class="form-control" id="input-interesse">
                     <option>Default select</option>
                 </select>
 
@@ -116,7 +117,7 @@
                         alt="Card image cap"></a>
                     <div class="card-body">
                         <a href="content2.html" title="Alugue o seu Imóvel com Segurança e sem Burocracia"><h5 class="card-title">Alugue o seu Imóvel com Segurança e sem Burocracia</h5></a>
-                        <p class="card-text">Alugar pode ser sim algo simples, seguro e sem esforço! Escolhendo certo com quem trabalhar, 
+                        <p class="card-text">Alugar pode ser sim algo simples, seguro e sem esforço! Escolhendo certo com quem trabalhar,
                             você pode ter o aluguel garantido, no prazo e pago diretamente pela administradora, sem riscos enquanto  durar a vigência do contrato.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
@@ -147,7 +148,7 @@
                         alt="Card image cap"></a>
                     <div class="card-body">
                         <a href="content4.html" title="Os Principais Benefícios de Usar uma Corretora Certa para Alugar o seu Imóvel"><h5 class="card-title">Os Principais Benefícios de Usar uma Corretora Certa para Alugar o seu Imóvel</h5></a>
-                        <p class="card-text">Encontrar inquilinos para o seu imóvel pode ser demorado e muito estressante.  
+                        <p class="card-text">Encontrar inquilinos para o seu imóvel pode ser demorado e muito estressante.
                             Mas, acredite: uma boa corretora pode te ajudar a tornar o processo de locação muito mais fácil e seguro!</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
@@ -181,28 +182,6 @@
         </div>
     </div>
 
-
-    <div class="container">
-        <div class="d-flex justify-content-center pb-5">
-            <div class="form-row">
-
-                <div class="d-flex bd-highlight">
-                    <div class="alin flex-row">
-                        <label for="validationCustom01">Nome Completo</label>
-                        <input type="text" class="form-control" id="input-nome" placeholder="Nome completo" required>
-                    </div>
-                    <div class="alin flex-row">
-                        <label for="validationCustom02">E-Mail</label>
-                        <input type="email" class="form-control" id="input-email" placeholder="E-mail" required>
-                    </div>
-
-                    <div class="align-self-end">
-                        <button id='submit-button'>Enviar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
