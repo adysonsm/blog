@@ -71,3 +71,38 @@ color: white;
 
     margin-top: 0px;
 }
+
+@font-face {
+    font-family: "Gotham Bold";
+    src: url("Gotham-Bold.otf");
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url("OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url("OpenSans-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Open Sans Extrabold";
+    src: url("OpenSans-ExtraBold.ttf");
+}
+
+h2{
+
+    font-family: "Gotham Bold";
+
+}
+
+p{
+    font-family: "Open Sans Regular";
+}
+
+body{
+    font-family: "Open Sans Regular";
+}
