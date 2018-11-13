@@ -12,8 +12,14 @@
 
     height: auto;
     display: flex;
-    flex-shrink: 1;
     justify-content: center;
+
+}
+
+.banner-top{
+
+    display: flex;
+    flex-shrink: 1;
 
 }
 
