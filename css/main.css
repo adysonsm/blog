@@ -72,6 +72,17 @@ color: white;
     margin-top: 0px;
 }
 
+#imagem-logo {
+
+    margin-left: 300px;
+    margin-bottom: -100px;
+    width: 200px;
+      
+    
+
+
+}
+
 @font-face {
     font-family: "Gotham Bold";
     src: url("Gotham-Bold.otf");
