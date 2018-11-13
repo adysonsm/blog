@@ -1,11 +1,13 @@
 var submitButton=document.getElementById('submit-button');
 var nomeRef=document.getElementById('input-nome');
 var emailRef=document.getElementById('input-email');
+var interesseRef=document.getElementById('input-interesse');
 
 var database=firebase.database();
 
 
-function writeData(id,nome,email){
+
+function writeData(id,nome,email,interesse){
 
     const data = new Date();
     const timezone = -2;
@@ -25,7 +27,8 @@ function writeData(id,nome,email){
         nome: nome,
         hora: data.getUTCFullYear()+'-'+data.getUTCMonth()+'-'+(data.getUTCDate()+mod)+' '+(data.getUTCHours()+timezone+mod*(-24))+':'+data.getUTCMinutes()+':'+data.getUTCSeconds(),
         ip:  getIP.ip,
-        tipo: 'B2C'
+        tipo: 'B2C',
+        interesse: interesse
 
      };
 
@@ -46,7 +49,7 @@ function Get(yourUrl){
 
 submitButton.onclick = function(){
 
-    console.log(nomeRef.value);    
+    console.log(document.getElementById('input-interesse').selectedIndex);    
     if (nomeRef.value.indexOf(' ')<1){
         console.log('nome invalido');
         alert('Nome inválido!')
@@ -86,9 +89,9 @@ submitButton.onclick = function(){
 
             if (repetido == false){
 
-                writeData(qtd,nomeRef.value,emailRef.value);
+                writeData(qtd,nomeRef.value,emailRef.value,interesseRef.selectedIndex);
+                
 
-                document.getElementById("form1").reset();
 
             }
     
