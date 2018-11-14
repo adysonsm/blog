@@ -49,7 +49,7 @@ function Get(yourUrl){
 
 submitButton.onclick = function(){
 
-    console.log(document.getElementById('input-interesse').selectedIndex);    
+    console.log(document.getElementById('input-interesse').options[document.getElementById('input-interesse').selectedIndex].text);    
     if (nomeRef.value.indexOf(' ')<1){
         console.log('nome invalido');
         alert('Nome inválido!')
@@ -89,7 +89,7 @@ submitButton.onclick = function(){
 
             if (repetido == false){
 
-                writeData(qtd,nomeRef.value,emailRef.value,interesseRef.value);
+                writeData(qtd,nomeRef.value,emailRef.value,interesseRef.options[interesseRef.selectedIndex].text);
                 
 
 
