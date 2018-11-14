@@ -49,7 +49,11 @@ function Get(yourUrl){
 
 submitButton.onclick = function(){
 
-    console.log(document.getElementById('input-interesse').options[document.getElementById('input-interesse').selectedIndex].text);    
+        
+    console.log(location.href);    
+    console.log(location.href.lastIndexOf('/'));   
+    console.log(location.href.slice(0,location.href.lastIndexOf('/')+1)+'agradecimento.html');  
+
     if (nomeRef.value.indexOf(' ')<1){
         console.log('nome invalido');
         alert('Nome inválido!')
@@ -91,7 +95,7 @@ submitButton.onclick = function(){
 
                 writeData(qtd,nomeRef.value,emailRef.value,interesseRef.options[interesseRef.selectedIndex].text);
                 
-
+                location.href= location.href.slice(0,location.href.lastIndexOf('/')+1)+'agradecimento.html';
 
             }
     
