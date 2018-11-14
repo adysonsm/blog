@@ -32,9 +32,13 @@ function writeData(id,nome,email,interesse){
 
      };
 
-     database.ref('meta/').set({
+     updates['meta/']={
         qtd: id+1
-    });  
+     }
+
+    //  database.ref('meta/').set({
+    //     qtd: id+1
+    // });  
 
     return firebase.database().ref().update(updates);
 
