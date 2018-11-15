@@ -42,6 +42,34 @@
         </noscript>
         <!-- End Facebook Pixel Code -->
 
+        <script>
+        
+            document.addEventListener('DOMContentLoaded', function() {
+    
+                
+                var downloadLink = document.createElement("a");
+                //var blob = new Blob(["\ufeff", csv]);
+                //var url = URL.createObjectURL(blob);
+                downloadLink.href = 'files/Check List.xlsx';
+                downloadLink.download = "Check List.xlsx";  //Name the file here
+                
+                setTimeout(function(){
+                    
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+
+                }, 3000);
+
+            
+
+            }, false);
+
+        
+        
+        </script>
+
+
 </head>
 
 <body>

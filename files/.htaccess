@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !agradecimento.html$
+RewriteRule .? - [F]
