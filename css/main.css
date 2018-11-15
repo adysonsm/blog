@@ -86,22 +86,26 @@ color: white;
 
 @font-face {
     font-family: "Gotham Bold";
+    font-display: swap;
     src: url("Gotham-Bold.otf");
 }
 
 @font-face {
     font-family: "Open Sans Regular";
+    font-display: swap;
     src: url("OpenSans-Regular.ttf");
 }
 
 @font-face {
     font-family: "Open Sans Regular";
+    font-display: swap;
     src: url("OpenSans-Bold.ttf");
     font-weight: bold;
 }
 
 @font-face {
     font-family: "Open Sans Extrabold";
+    font-display: swap;
     src: url("OpenSans-ExtraBold.ttf");
 }
 
