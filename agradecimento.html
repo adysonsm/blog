@@ -44,8 +44,9 @@
 
         <script>
         
-            document.addEventListener('DOMContentLoaded', function() {
-    
+            //document.addEventListener('DOMContentLoaded', function() {
+            //document.getElementById('submit-button').onclick() = function() {
+            function baixar(){
                 
                 var downloadLink = document.createElement("a");
                 //var blob = new Blob(["\ufeff", csv]);
@@ -53,17 +54,17 @@
                 downloadLink.href = 'files/Check List.xlsx';
                 downloadLink.download = "Check List.xlsx";  //Name the file here
                 
-                setTimeout(function(){
+                //setTimeout(function(){
                     
                     document.body.appendChild(downloadLink);
                     downloadLink.click();
                     document.body.removeChild(downloadLink);
 
-                }, 3000);
+                //}, 3000);
 
             
-
-            }, false);
+            }
+            //}, false);
 
         
         
@@ -86,10 +87,16 @@
             <h2 class="align-text">Obrigado pela visita!</h2>
             <p class=" col-md-10">
 
-                    Dentro de alguns segundos o download do nosso checklist deve começar. Mas antes de mergulhar nessa ferramenta super legal, porque você não 
-                    aproveita para conferir mais algumas das dicas abaixo?
+                    Esperamos que você esteja gostando do que viu até agora. Clicando no botão abaixo você fará o download da nossa checklist, 
+                    para poder planejar melhor sua mudança. 
+                    Mas antes de mergulhar nessa ferramenta super legal, porque você não 
+                    aproveita para conferir mais algumas das dicas no final da página?
 
             </p>
+
+            <div class="form-group  col-md-5">
+                    <button class="btn btn-primary btn-lg col-md-12" id='submit-button' onclick="baixar()">Checklist - Planejando uma mudança</button>
+            </div>
 
 
 
