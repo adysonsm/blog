@@ -51,9 +51,6 @@
 
     <div class="container col-md-8" id="form">
 
-
-
-
         <form  class="d-flex align-items-center flex-column" id="form-campos" onsubmit="event.preventDefault();">
 
             <h2 class="align-text">Baixe nossa checklist</h2>
@@ -61,34 +58,30 @@
                     E descubra tudo o que precisa saber antes de ir morar sozinho
             </p>
 
-
             <div class="form-group col-md-5 ">
-                <label for="validationCustom01">Nome Completo</label>
-                <input type="text" class="form-control" id="input-nome" placeholder="Nome completo" autofocus required>
+                <label for="input-nome">Nome Completo</label>
+                <input type="text" class="form-control" name="input-nome" id="input-nome" placeholder="Nome completo" autofocus required>
 
             </div>
 
-
             <div class="form-group col-md-5">
-                <label for="validationCustom02">E-Mail</label>
-                <input type="email" class="form-control" id="input-email" placeholder="E-mail" required>
+                <label for="input-email">E-Mail</label>
+                <input type="email" class="form-control" name="input-email" id="input-email" placeholder="E-mail" required>
             </div>
 
             <div class="form-group col-md-5">
-                <label for="validationCustom03">Sou</label>
-                <select class="form-control" id="input-interesse">
-                    <option>Inquilinx</option>
-                    <option>Proprietárix</option>
-                    <option>Corretorx</option>
-                    <option>Curiosx</option>
-
+                <label for="input-interesse">Sou</label>
+                <select class="form-control" name="input-interesse" id="input-interesse">
+                    <option label="Inquilino">Inquilinx</option>
+                    <option label="Proprietário">Proprietárix</option>
+                    <option label="Corretor">Corretorx</option>
+                    <option label="Curioso">Curiosx</option>
                 </select>
 
             </div>
 
-
             <div class="form-group  col-md-5">
-                <button class="btn btn-primary btn-lg col-md-12" id='submit-button'>Baixar nossa checklist!</button>
+                <button class="btn btn-primary btn-lg col-md-12" type="button" id='submit-button'>Baixar nossa checklist!</button>
             </div>
 
         </form>
