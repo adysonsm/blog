@@ -63,7 +63,7 @@ color: white;
 
     background-color:#67FFB8;
     margin-top: 10px;
-    color: #5063EF;
+    color: #1A67B7;
 
 }
 
@@ -121,4 +121,16 @@ p{
 
 body{
     font-family: "Open Sans Regular";
+}
+
+a:link {
+
+    color: #1A67B7
+
+}
+
+a:visited {
+
+    color: #1A67B7
+
 }
