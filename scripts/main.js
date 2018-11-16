@@ -62,7 +62,7 @@ submitButton.onclick = function(){
         console.log('nome invalido');
         alert('Nome inválido!')
     }
-    else if ((emailRef.value.indexOf('@')<1)||(emailRef.value.indexOf('.')<3)||(emailRef.value.indexOf('.')==emailRef.value.length-1)){
+    else if ((emailRef.value.indexOf('@')<1)||(emailRef.value.lastIndexOf('.')<3)||(emailRef.value.lastIndexOf('.')==emailRef.value.length-1)){
         console.log('email invalido');
         alert('E-Mail inválido!')
     
